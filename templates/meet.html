@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Audiowide|Righteous|Concert One|Russo One|Kalam">
+    <link rel="stylesheet"
+        href="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\style.css">
+    <script
+        src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\templates\script.js"
+        defer></script>
+    <title>5 x 5</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul style="margin-right: auto; padding-left: 8px">
+                <li class="nav-item title">
+                    <img class="logo-img" id="logo-img-hover"
+                        src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\logo.png">
+                    <a style="margin-left: 80px" href="#" id="hide">5 x 5</a>
+                </li>
+            </ul>
+
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+            <ul style="align-self: flex-end">
+                <li class="nav-item nav-link" id="desktop-nav-link"><a href="#">About</a></li>
+                <li class="nav-item nav-link" id="desktop-nav-link"><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-collapse">
+            <ul style="align-self: center">
+                <li class="nav-item nav-link" onclick="collapse()"><a href="#">Home</a></li>
+                <li class="nav-item nav-link" onclick="collapse()"><a href="#">About</a></li>
+                <li class="nav-item nav-link" onclick="collapse()"><a href="#">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <p2>
+            John, the people you connected with would also like to meet.
+        </p2>
+
+        <div class="grid-container">
+
+            <div class="first-profile">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\john.png">
+                <p style="margin-top: 0px">John</p>
+            </div>
+
+            <div class="second-profile">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\jack.png">
+                <p style="margin-top: 0px">Jack</p>
+            </div>
+
+            <div class="third-profile">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\jane.png">
+                <p style="margin-top: 0px">Jane</p>
+            </div>
+
+            <div class="fourth-profile">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\jill.png">
+                <p style="margin-top: 0px">Jill</p>
+            </div>
+
+            <div class="fifth-profile">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\kevin.png">
+                <p style="margin-top: 0px">Kevin</p>
+            </div>
+
+            <div class="same-interests">
+                <p2 style="display: block; margin: 8px 0px">Hiking</p2>
+                <p2 style="display: block; margin: 8px 0px">Photography</p2>
+                <p2 style="display: block; margin: 8px 0px">Coding</p2>
+            </div>
+
+        </div>
+
+        <p2 style="margin-bottom: 0px">Would you like to meet them on</p2>
+        <p style="margin-top: 0px">Saturday, April 30th at 12:30 PM?</p>
+        <p2 style="margin-top: 8px; margin-bottom: 8px">At:</p2>
+
+        <div class="location-container">
+            <div class="location-item">
+                <img
+                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\coffee_shop.png">
+            </div>
+            <div class="location-item">
+                <p>
+                    Coffee Shop
+                    <br>
+                    123 Street
+                    <br>
+                    ABC Town, NY 12345
+                </p>
+            </div>
+        </div>
+
+        <div class="settings-container">
+            <div class="settings-item">
+                <form>
+                    <input type="submit" class="answer-button" value="Yes">
+                </form>
+            </div>
+            <div class="settings-item">
+                <form>
+                    <input type="submit" class="answer-button" value="No">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

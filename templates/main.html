@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Audiowide|Righteous|Concert One|Russo One|Kalam">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>5 x 5</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul style="margin-right: auto; padding-left: 8px">
+                <a href="{{ url_for('user_profile', user_id=1) }}">
+                    <li class="nav-item title">
+                        <img class="logo-img" id="logo-img-hover" src="{{ url_for('static', filename='logo.png') }}">
+                        <div style="margin-left: 80px" id="hide">5 x 5</div>
+                    </li>
+                </a>
+            </ul>
+
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+            <ul style="align-self: flex-end">
+                <li class="nav-item nav-link" id="desktop-nav-link"><a href="#">About</a></li>
+                <li class="nav-item nav-link" id="desktop-nav-link"><a href="{{ url_for('signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-collapse">
+            <ul style="align-self: center">
+                <li class="nav-item nav-link" onclick="collapse()"><a href="{{ url_for('user_profile', user_id=1) }}">My
+                        Profile</a></li>
+                <li class="nav-item nav-link" onclick="collapse()"><a href="#">About</a></li>
+                <li class="nav-item nav-link" onclick="collapse()"><a href="{{ url_for('signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block container %}
+
+    {% endblock %}
+
+</body>
+
+</html>

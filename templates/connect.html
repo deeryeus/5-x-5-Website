@@ -1,123 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'main.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Audiowide|Righteous|Concert One|Russo One|Kalam">
-    <link rel="stylesheet"
-        href="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\style.css">
-    <script
-        src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\templates\script.js"
-        defer></script>
-    <title>5 x 5</title>
-</head>
+{% block container %}
 
-<body>
-    <header>
-        <nav class="nav">
-            <ul style="margin-right: auto; padding-left: 8px">
-                <li class="nav-item title">
-                    <img class="logo-img" id="logo-img-hover"
-                        src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\logo.png">
-                    <a style="margin-left: 80px" href="#" id="hide">5 x 5</a>
-                </li>
-            </ul>
+<div class="container">
 
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <p2>You've been connected!</p2>
+
+    <div class="grid-container">
+
+        <div class="first-profile">
+            <a href="{{ url_for('profile', user_id=profile_ids[0]) }}">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="{{ url_for('static', filename=profile[0]['Picture']) }}">
             </a>
-
-            <ul style="align-self: flex-end">
-                <li class="nav-item nav-link" id="desktop-nav-link"><a href="#">About</a></li>
-                <li class="nav-item nav-link" id="desktop-nav-link"><a href="#">Sign In</a></li>
-            </ul>
-        </nav>
-
-        <nav class="nav-collapse">
-            <ul style="align-self: center">
-                <li class="nav-item nav-link" onclick="collapse()"><a href="#">Home</a></li>
-                <li class="nav-item nav-link" onclick="collapse()"><a href="#">About</a></li>
-                <li class="nav-item nav-link" onclick="collapse()"><a href="#">Sign In</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-
-        <p2>You've been connected!</p2>
-
-        <div class="grid-container">
-
-            <div class="first-profile">
-                <img class="profile-img" style="margin-bottom: 2px"
-                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\john.png">
-                <p style="margin-top: 0px">John</p>
-            </div>
-
-            <div class="second-profile">
-                <img class="profile-img" style="margin-bottom: 2px"
-                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\jack.png">
-                <p style="margin-top: 0px">Jack</p>
-            </div>
-
-            <div class="third-profile">
-                <img class="profile-img" style="margin-bottom: 2px"
-                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\jane.png">
-                <p style="margin-top: 0px">Jane</p>
-            </div>
-
-            <div class="fourth-profile">
-                <img class="profile-img" style="margin-bottom: 2px"
-                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\jill.png">
-                <p style="margin-top: 0px">Jill</p>
-            </div>
-
-            <div class="fifth-profile">
-                <img class="profile-img" style="margin-bottom: 2px"
-                    src="C:\Users\Darius\Documents\EPI School\Coursework\8 - Your app in Flask\8-7 Your App - Code up the first few pages\static\kevin.png">
-                <p style="margin-top: 0px">Kevin</p>
-            </div>
-
-            <div class="same-interests">
-                <p2 style="display: block; margin: 8px 0px">Hiking</p2>
-                <p2 style="display: block; margin: 8px 0px">Photography</p2>
-                <p2 style="display: block; margin: 8px 0px">Coding</p2>
-            </div>
-
+            <p style="margin-top: 0px">{{ profile[0]['Name'] }}</p>
         </div>
 
-        <p2 style="margin-top: 8px">Click on a picture to expand a profile.</p2>
-
-        <p2 style="margin: 8px 0px">Would you like to meet them?</p2>
-
-        <div class="settings-container">
-            <div class="settings-item">
-                <form>
-                    <input type="submit" class="answer-button" value="Yes">
-                </form>
-            </div>
-            <div class="settings-item">
-                <form>
-                    <input type="submit" class="answer-button" value="No">
-                </form>
-            </div>
+        <div class="second-profile">
+            <a href="{{ url_for('profile', user_id=profile_ids[1]) }}">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="{{ url_for('static', filename=profile[1]['Picture']) }}">
+            </a>
+            <p style="margin-top: 0px">{{ profile[1]['Name'] }}</p>
         </div>
 
-        <p2 style="margin: 8px 0px">
-            If everyone says yes,
-            <br>
-            we'll find a date and place
-            <br>
-            for everyone to meet.
-        </p2>
-        
+        <div class="third-profile">
+            <a href="{{ url_for('profile', user_id=profile_ids[2]) }}">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="{{ url_for('static', filename=profile[2]['Picture']) }}">
+            </a>
+            <p style="margin-top: 0px">{{ profile[2]['Name'] }}</p>
+        </div>
+
+        <div class="fourth-profile">
+            <a href="{{ url_for('profile', user_id=profile_ids[3]) }}">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="{{ url_for('static', filename=profile[3]['Picture']) }}">
+            </a>
+            <p style="margin-top: 0px">{{ profile[3]['Name'] }}</p>
+        </div>
+
+        <div class="fifth-profile">
+            <a href="{{ url_for('profile', user_id=profile_ids[4]) }}">
+                <img class="profile-img" style="margin-bottom: 2px"
+                    src="{{ url_for('static', filename=profile[4]['Picture']) }}">
+            </a>
+            <p style="margin-top: 0px">{{ profile[4]['Name'] }}</p>
+        </div>
+
+        <div class="same-interests">
+            <p2 style="display: block; margin: 8px 0px">{{ common_interests[0] }}</p2>
+            <p2 style="display: block; margin: 8px 0px">{{ common_interests[1] }}</p2>
+            <p2 style="display: block; margin: 8px 0px">{{ common_interests[2] }}</p2>
+        </div>
+
     </div>
 
-</body>
+    <p2 style="margin-top: 8px">Click on a picture to expand a profile.</p2>
 
-</html>
+    <p2 style="margin: 8px 0px">Would you like to meet them?</p2>
+
+    <div class="settings-container">
+        <div class="settings-item">
+            <!--<form>-->
+                <!--HARD CODED-->
+                <a href="{{ url_for('meet', connection_id=1) }}">
+                    <input type="submit" class="answer-button" value="Yes">
+                </a>
+            <!--</form>-->
+        </div>
+        <div class="settings-item">
+            <form>
+                <input type="submit" class="answer-button" value="No">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
